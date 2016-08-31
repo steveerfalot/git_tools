@@ -1,0 +1,33 @@
+#!/bin/bash
+
+currentDirectory=$(pwd)
+if [ $# -eq 0 ]; then
+  base_directory=/workspace/bullhorn/bh-env/novo-dev/novo
+else
+  base_directory=$1
+fi
+
+function gitoperations {
+  git remote prune origin
+  git up
+}
+
+function run_npm {
+  if [[ -f "package.json" ]]; then
+    rm -rvf node_modules/
+    npm install
+  else
+    echo "No damn file to make me run NPM INSTALL!!!!!!!!!!!!!!!!!"
+  fi
+}
+
+cd $base_directory
+git up
+run_npm
+for git_dir in `find . -type d -name .git | xargs -n 1 dirname`; do
+  cd $git_dir
+  gitoperations 
+  cd $base_directory
+done
+
+cd $currentDirectory

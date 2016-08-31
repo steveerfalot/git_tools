@@ -1,0 +1,23 @@
+#!/bin/bash
+
+currentDirectory=$(pwd)
+if [ $# -eq 0 ]; then
+  base_directory=$currentDirectory
+else
+  base_directory=$1
+fi
+
+function gitoperations {
+  branches=$(git branch | grep -v master | grep -v development)
+  git checkout master
+  git branch -D $branches 
+}
+
+cd $base_directory
+for git_dir in `find . -type d -name .git | xargs -n 1 dirname`; do
+  cd $git_dir
+  gitoperations 
+  cd $base_directory
+done
+
+cd $currentDirectory
