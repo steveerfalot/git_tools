@@ -3,6 +3,7 @@
 Some scripts for managing projects comprised of many small repositories
 
 Only works in bash... sorry Windows
+
 Relies on you having [git-up](https://github.com/msiemens/PyGitUp) installed
 
 ### Note: The update script is WIP, so use at your own risk
