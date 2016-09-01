@@ -16,6 +16,13 @@ Relies on you having [git-up](https://github.com/msiemens/PyGitUp) installed
     
 This script will find all git repositories within your current working directory and its subdirectories and `git checkout` whatever branch you pass in
 
+## update
+
+    path/to/script/update [<optional_base_directory>]
+    
+This script is not stable, and I don't recommend using it at all.
+It attempts to safely delete any branches that have been merged to `master`, but I'm not convinced that it works as intended.
+
 ## updateNovo
 
     path/to/script/updateNovo [<optional_base_directory>]
