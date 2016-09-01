@@ -2,7 +2,7 @@
 
 Some scripts for managing projects comprised of many small repositories
 
-Only works in bash... sorry Windows
+Only works in bash... sorry Windows... unless you are using Git Bash, or the Windows 10 bash-in-windows implementation
 
 Relies on you having [git-up](https://github.com/msiemens/PyGitUp) installed
 
