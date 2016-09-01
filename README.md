@@ -16,7 +16,7 @@ Relies on you having [git-up](https://github.com/msiemens/PyGitUp) installed
     
 This script will find all git repositories within your current working directory and its subdirectories and `git checkout` whatever branch you pass in
 
-## update
+## update *\*WIP\**
 
     path/to/script/update [<optional_base_directory>]
     
@@ -32,7 +32,7 @@ Then it finds all git repositories in or under the base directory and runs `git 
 If you don't have [git-up](https://github.com/msiemens/PyGitUp) installed, the script will fail
 
 ## prune-local
-### WARNING: Will delete *ALL* branches that aren't master or development
+### WARNING: Will delete *\*ALL\** branches that aren't master or development
 
     path/to/script/prune-local [<optional_base_directory>]
     
