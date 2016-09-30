@@ -16,7 +16,7 @@ Relies on you having [git-up](https://github.com/msiemens/PyGitUp) installed
     
 This script will find all git repositories within your current working directory and its subdirectories and `git checkout` whatever branch you pass in
 
-## update *\*WIP\**
+## update *** WIP ***
 
     path/to/script/update [<optional_base_directory>]
     
@@ -32,8 +32,15 @@ Then it finds all git repositories in or under the base directory and runs `git 
 If you don't have [git-up](https://github.com/msiemens/PyGitUp) installed, the script will fail
 
 ## prune-local
-### WARNING: Will delete *\*ALL\** branches that aren't master or development
+### WARNING: Will delete *** ALL *** branches that aren't master or development
 
     path/to/script/prune-local [<optional_base_directory>]
     
 This script runs `git branch -D` for all branches that are not `master` or `development` in all directories that are git repositories under or in your current working directory or its subdirectories
+
+## reset-hard
+
+    path/to/script/reset-hard
+    
+Resets all nested git directories with `--hard`
+Will support arguments in the future

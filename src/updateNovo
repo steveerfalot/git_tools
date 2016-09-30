@@ -2,7 +2,7 @@
 
 currentDirectory=$(pwd)
 if [ $# -eq 0 ]; then
-  base_directory=/workspace/bullhorn/bh-env/novo-dev/novo
+  base_directory=$currentDirectory
 else
   base_directory=$1
 fi
@@ -26,7 +26,7 @@ git up
 run_npm
 for git_dir in `find . -type d -name .git | xargs -n 1 dirname`; do
   cd $git_dir
-  gitoperations 
+  gitoperations
   cd $base_directory
 done
 
