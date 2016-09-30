@@ -42,5 +42,5 @@ This script runs `git branch -D` for all branches that are not `master` or `deve
 
     path/to/script/reset-hard
     
-Resets all nested git directories with `--hard`
+Resets all nested git directories with `--hard` <br />
 Will support arguments in the future
